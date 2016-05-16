@@ -1,0 +1,23 @@
+﻿@model VixEng.Entities.Funcionarios
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Your daily deal: @Model.nome</h3>
+    </div>
+    <div class="panel-body">
+        <p>
+        </p>
+        <div id="album-details">
+            <p>
+                <em>Artist:</em>
+            </p>
+            <p>
+                <em>Price:</em>
+            </p>
+            @Html.ActionLink("Add to cart", "AddToCart",
+"ShoppingCart",
+new { id = 0 },
+new { @class = "btn btn-primary" })
+        </div>
+    </div>
+</div>

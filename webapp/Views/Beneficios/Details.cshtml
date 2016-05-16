@@ -1,0 +1,50 @@
+﻿@model VixEng.Entities.Beneficios
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Beneficios</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Funcionarios.nome)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Funcionarios.nome)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Tipo_Beneficio.descricao)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Tipo_Beneficio.descricao)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.observacao)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.observacao)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

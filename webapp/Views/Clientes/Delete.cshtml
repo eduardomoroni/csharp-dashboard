@@ -1,0 +1,248 @@
+﻿@model VixEng.Entities.Clientes
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Clientes</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Cidades.cidade)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Cidades.cidade)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.status)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.status)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.data_cadastro)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.data_cadastro)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.tipo_pessoa)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.tipo_pessoa)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.cnpj_cpf)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.cnpj_cpf)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.nome)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nome)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.fantasia)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.fantasia)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.contato)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.contato)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.inscricao_estadual)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.inscricao_estadual)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.inscricao_municipal)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.inscricao_municipal)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.data_nascimento)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.data_nascimento)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.rg)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.rg)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.telefone1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.telefone1)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.telefone2)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.telefone2)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.telefone3)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.telefone3)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.endereco)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.endereco)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.numero)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.numero)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.complemento)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.complemento)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.bairro)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.bairro)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.id_uf)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.id_uf)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.cep)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.cep)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ponto_referencia)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ponto_referencia)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.site)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.site)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.login)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.login)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.senha)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.senha)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.data_inclusao)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.data_inclusao)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

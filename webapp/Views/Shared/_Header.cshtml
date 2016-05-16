@@ -1,0 +1,29 @@
+﻿    <!-- HEADER -->
+<header id="header">
+    <div id="logo-group">
+
+        <!-- PLACE YOUR LOGO HERE -->
+        <span id="logo"> <img src="~/content/img/logo.png" alt="SmartAdmin"> </span>
+        <!-- END LOGO PLACEHOLDER -->
+        @if (Request.IsAuthenticated)
+        {
+            <!-- Note: The activity badge color changes when clicked and resets the number to 0
+            Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
+
+        }
+    </div>
+
+    <section id="top-right">
+        @if (@Model is HelperResult)
+        {
+            @Model
+        }
+        else
+        {
+            <div class="pull-right">
+                @Html.Partial("_TopRight")
+            </div>
+        }
+    </section>
+</header>
+<!-- END HEADER -->
