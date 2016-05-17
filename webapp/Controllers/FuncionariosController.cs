@@ -5,12 +5,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
 using VixEng.Entities;
 
 namespace VixEng.Controllers
 {
     [Authorize]
+    [EnableCors(origins: "http://correiosapi.apphb.com", headers: "*", methods: "*")]
     public class FuncionariosController : Controller
     {
         private databaseModel db = new databaseModel();
@@ -20,19 +22,6 @@ namespace VixEng.Controllers
         {
             var funcionarios = db.Funcionarios.Include(f => f.AspNetUsers).Include(f => f.Bancos).Include(f => f.Cargos).Include(f => f.Cidades).Include(f => f.UF);
             return View(funcionarios.ToList());
-        }
-
-        public ActionResult CEPAutoComplete(string term)
-        {
-            var ceps = GetCep(term).Select(a => new { value = a.cep });
-            return Json(ceps, JsonRequestBehavior.AllowGet);
-        }
-
-        private List<ConsultaCEPBrasil> GetCep(string searchString)
-        {
-            return db.ConsultaCEPBrasil
-            .Where(a => a.cep.Contains(searchString))
-            .ToList();
         }
 
         [HttpPost]
@@ -152,10 +141,14 @@ namespace VixEng.Controllers
             {
                 return HttpNotFound();
             }
+            var cities = from c in db.Cidades
+                         where c.id_uf == funcionarios.id_uf
+                         select c;
+
             ViewBag.id_user = new SelectList(db.AspNetUsers, "Id", "UserName", funcionarios.id_user);
             ViewBag.id_banco = new SelectList(db.Bancos, "Id", "Codigo", funcionarios.id_banco);
             ViewBag.id_cargo = new SelectList(db.Cargos, "id", "descricao", funcionarios.id_cargo);
-            ViewBag.id_cidade = new SelectList(db.Cidades, "id", "cidade", funcionarios.id_cidade);
+            ViewBag.id_cidade = new SelectList(cities, "id", "cidade", funcionarios.id_cidade);
             ViewBag.id_uf = new SelectList(db.UF, "id", "uf1", funcionarios.id_uf);
             ViewBag.id_tipo_documento = new SelectList(db.Tipo_Documento, "id", "tipo_documento1", null);
             ViewBag.id_tipo_beneficio = new SelectList(db.Tipo_Beneficio, "id", "descricao", null);
