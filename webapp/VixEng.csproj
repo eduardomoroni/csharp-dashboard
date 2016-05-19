@@ -163,7 +163,7 @@
     <Content Include="Areas\Landing\Content\img\back-img1.png" />
     <Content Include="Areas\Landing\Content\img\grabbing.png" />
     <Content Include="Areas\Landing\Content\img\loader.gif" />
-    <Content Include="Areas\Landing\Content\img\logo.png" />
+    <Content Include="Areas\Landing\Content\img\_logo.png" />
     <Content Include="Areas\Landing\Content\img\ribbon.png" />
     <Content Include="Areas\Landing\Content\img\slider\3dbg.jpg" />
     <Content Include="Areas\Landing\Content\img\slider\check.png" />
@@ -366,6 +366,8 @@
     <Content Include="Content\img\glass.jpg" />
     <Content Include="Content\img\gradient\login.png" />
     <Content Include="Content\img\hue.png" />
+    <Content Include="Content\img\icon\CSS-3-64.png" />
+    <Content Include="Content\img\icon\HTML5-Logo-64.png" />
     <Content Include="Content\img\invoice\americanexpress.png" />
     <Content Include="Content\img\invoice\license.txt" />
     <Content Include="Content\img\invoice\mastercard.png" />
@@ -393,12 +395,12 @@
     <Content Include="Content\img\jqueryui\ui-icons_f6cf3b_256x240.png" />
     <Content Include="Content\img\jqueryui\ui-icons_ffffff_256x240.png" />
     <Content Include="Content\img\loading.gif" />
-    <Content Include="Content\img\logo-blacknwhite.png" />
-    <Content Include="Content\img\logo-blue.png" />
+    <Content Include="Content\img\_logo-blacknwhite.png" />
+    <Content Include="Content\img\_logo-blue.png" />
     <Content Include="Content\img\logo-o.png" />
-    <Content Include="Content\img\logo-pale.png" />
-    <Content Include="Content\img\logo-white.png" />
-    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\_logo-pale.png" />
+    <Content Include="Content\img\_logo-white.png" />
+    <Content Include="Content\img\_logo.png" />
     <Content Include="Content\img\mappin-default.png" />
     <Content Include="Content\img\minus.png" />
     <Content Include="Content\img\mybg.png" />
