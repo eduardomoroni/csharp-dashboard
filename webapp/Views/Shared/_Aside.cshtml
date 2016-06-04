@@ -21,13 +21,9 @@
             <li class="@Html.RouteIf("Funcionarios", "active")">
                 <a href="@Url.Action("Index", "Funcionarios")"><i class="fa fa-lg fa-fw fa-user"></i> <span class="menu-item-parent">Funcionarios</span></a>
             </li>
-            <li class="@Html.RouteIf("Clientes", "active")">
+            @*<li class="@Html.RouteIf("Clientes", "active")">
                 <a href="@Url.Action("Index", "Clientes")"><i class="fa fa-lg fa-fw fa-bookmark"></i> <span class="menu-item-parent">Clientes</span></a>
-            </li>
-            <li class="@Html.RouteIf("Beneficios", "active")">
-                <a href="@Url.Action("Index", "Beneficios")"><i class="fa fa-lg fa-fw fa-bitcoin"></i> <span class="menu-item-parent">Beneficios</span></a>
-            </li>
-
+            </li>*@
             <li class="@Html.RouteIf("graphs", "active")">
                 <a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o"></i> <span class="menu-item-parent">Graphs</span></a>
                 <ul>
